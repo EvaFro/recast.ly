@@ -23,7 +23,7 @@ class App extends React.Component {
         </nav>
         <div className="row">
           <div className="col-md-7">
-            <div><VideoPlayer videos={this.state.nowPlaying} /></div>
+            <div><VideoPlayer video={this.state.nowPlaying} /></div>
           </div>
           <div className="col-md-5">
             <div><VideoList videos={this.props.allVideos} changeVideo={this.changeVideo.bind(this)}/></div>
