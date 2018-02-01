@@ -2,16 +2,16 @@ var App = () => (
   <div>
     <nav className="navbar">
       <div className="col-md-6 offset-md-3">
-        <div><h5><em>search</em> view goes here</h5></div>
+        <div><Search /></div>
       </div>
     </nav>
     <div className="row">
       <div className="col-md-7">
 // We added the videoplayer component here
-        <div><VideoPlayer /></div>
+        <div><VideoPlayer /></div>a
       </div>
       <div className="col-md-5">
-        <div><h5><em>videoList</em> view goes here</h5></div>
+        <div><VideoList /></div>
       </div>
     </div>
   </div>
