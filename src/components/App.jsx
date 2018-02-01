@@ -2,16 +2,14 @@ class App extends React.Component {
   
   constructor(props) {
     super(props);
-
-    this.state = {
-      nowPlaying: 'PLACEHOLDER'
-    };
+    this.state = {nowPlaying: this.props.allVideos[0]};
   }
 
-  changeVideo() {
-    console.log('hey');
+  changeVideo(arg) {
+  // console.log("passed data", arg);
+  // console.log("oG data", this.props.allVideos[0]);
     this.setState({
-      nowPlaying: 'PLACEHOLDER'
+      nowPlaying: arg
     });
   }
 
@@ -25,10 +23,10 @@ class App extends React.Component {
         </nav>
         <div className="row">
           <div className="col-md-7">
-            <div><VideoPlayer videos={this.props.allVideos[1]} /></div>
+            <div><VideoPlayer videos={this.state.nowPlaying} /></div>
           </div>
           <div className="col-md-5">
-            <div><VideoList videos={this.props.allVideos} changeVideo={this.changeVideo}/></div>
+            <div><VideoList videos={this.props.allVideos} changeVideo={this.changeVideo.bind(this)}/></div>
           </div>
         </div>
       </div>
