@@ -1,4 +1,4 @@
-var App = () => (
+var App = (props) => (
   <div>
     <nav className="navbar">
       <div className="col-md-6 offset-md-3">
@@ -7,11 +7,10 @@ var App = () => (
     </nav>
     <div className="row">
       <div className="col-md-7">
-// We added the videoplayer component here
-        <div><VideoPlayer /></div>a
+        <div><VideoPlayer /></div>
       </div>
       <div className="col-md-5">
-        <div><VideoList /></div>
+        <div><VideoList videos={props.allVideos} /></div>
       </div>
     </div>
   </div>
