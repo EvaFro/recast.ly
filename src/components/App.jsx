@@ -8,8 +8,13 @@ class App extends React.Component {
     };
   }
 
-  render() {
+  changeVideo() {
+    this.setState({
+      nowPlaying: 'PLACEHOLDER'
+    });
+  }
 
+  render() {
     return (
       <div>
         <nav className="navbar">
@@ -28,7 +33,6 @@ class App extends React.Component {
       </div>
     );
   }
-
 }
 
 
