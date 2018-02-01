@@ -9,6 +9,7 @@ class App extends React.Component {
   }
 
   changeVideo() {
+    console.log('hey');
     this.setState({
       nowPlaying: 'PLACEHOLDER'
     });
@@ -27,7 +28,7 @@ class App extends React.Component {
             <div><VideoPlayer videos={this.props.allVideos[1]} /></div>
           </div>
           <div className="col-md-5">
-            <div><VideoList videos={this.props.allVideos} /></div>
+            <div><VideoList videos={this.props.allVideos} changeVideo={this.changeVideo}/></div>
           </div>
         </div>
       </div>
