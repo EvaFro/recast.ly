@@ -7,12 +7,14 @@ var searchYouTube = (options, callback) => {
     data: $.extend({
       q: options.query,
       key: options.key,
+      type: 'video',
       part: 'snippet'}, {maxResults: options.max}),
     contentType: 'application/jason',
     success: function(data) {
+    //debugger;
       console.log('Search request retrieved');
-      console.log(data);
-      /*return callback(data); ???*/
+      // console.log('look at me', data.items);
+      callback(data);
     
     },
     error: function(data) {
@@ -22,12 +24,6 @@ var searchYouTube = (options, callback) => {
   });
   
 };
-
-
-
-
-
-
 
 
 
